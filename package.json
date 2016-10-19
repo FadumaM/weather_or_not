@@ -1,0 +1,27 @@
+{
+  "name": "weather_or_not",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FadumaM/weather_or_not.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FadumaM/weather_or_not/issues"
+  },
+  "homepage": "https://github.com/FadumaM/weather_or_not#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.4.19",
+    "morgan": "^1.7.0",
+    "request-promise": "^3.0.0",
+  }
+}
