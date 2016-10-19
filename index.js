@@ -21,11 +21,6 @@ app.use(methodOverride(function(req, res) {
 }));
 
 app.use(function(err, req, res, next) {
-  if (err.name === 'UnauthorizedError') {
-    return res.status(401).json({
-      message: 'Unauthorized request.'
-    });
-  }
   next();
 });
 
