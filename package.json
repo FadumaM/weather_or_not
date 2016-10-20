@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "node-sass --output-style compressed -o public/css public/build/sass/app.scss",
+    "build-js": "./node_modules/.bin/uglifyjs public/build/js/**.js -b -o public/js/app.js",
+    "watch-js": "nodemon -e js  -x \"npm run build-js\"",
+    "watch-sass": "nodemon -e scss  -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,10 @@
     "method-override": "^2.3.6",
     "mongoose": "^4.4.19",
     "morgan": "^1.7.0",
-    "request-promise": "^3.0.0",
+    "request-promise": "^3.0.0"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.7.3",
+    "node-sass": "^3.10.1"
   }
 }

@@ -7,7 +7,7 @@ function getLocale(req, res) {
 
   console.log("hi");
 
-  var options = {
+  var localeObject = {
     uri: "http://ip-api.com/json",
     json: true
   };
