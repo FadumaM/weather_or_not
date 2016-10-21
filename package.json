@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build-css": "node-sass --output-style compressed -o public/css public/build/sass/app.scss",
-    "build-js": "./node_modules/.bin/uglifyjs public/build/js/**.js -b -o public/js/app.js",
-    "watch-js": "nodemon -e js  -x \"npm run build-js\"",
+    "build-babel-js": "./node_modules/.bin/babel public/build/js -d public/js",
+    "watch-babel-js": "nodemon -e js  -x \"npm run build-babel-js\"",
     "watch-sass": "nodemon -e scss  -x \"npm run build-css\""
   },
   "repository": {
@@ -28,7 +28,9 @@
     "request-promise": "^3.0.0"
   },
   "devDependencies": {
-    "uglify-js": "^2.7.3",
-    "node-sass": "^3.10.1"
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "node-sass": "^3.10.1",
+    "uglify-js": "^2.7.3"
   }
 }

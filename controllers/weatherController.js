@@ -4,8 +4,6 @@ let rp = require("request-promise");
 
 function getLocale() {
 
-  console.log("hi");
-
   var localeObject = {
     uri: "http://ip-api.com/json",
     json: true
@@ -36,7 +34,6 @@ function start(req, res) {
       return getWeather(city);
     })
     .then(function(response) {
-      console.log(response);
       return res.status(200).send(response);
     })
     .catch(function(err) {
