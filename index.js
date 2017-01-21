@@ -5,7 +5,6 @@ const morgan = require("morgan");
 const methodOverride = require("method-override");
 const bodyParser = require("body-parser");
 const config = require("./config/config");
-
 const app = express();
 
 app.use(morgan('dev'));
